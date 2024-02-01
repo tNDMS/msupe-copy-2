@@ -136,7 +136,7 @@ body._lock {
 .switch-language {
 	position: absolute;
 	top: 0;
-	left: 0;
+	right: 0;
 	padding: .2rem;
 	&__icon {
 		display: flex;
@@ -151,20 +151,20 @@ body._lock {
 
 	&__menu {
 		position: absolute;
-		top: 35px;
-		left: -1000px;
+		top: -70%;
+		right: 0;
 		display: block;
 		transition: all .5s ease 0s;
-		// transform: scale(0) translate(0px, 50%);
+		transform: rotate(45deg) translate(0px, 50%);
 
 	}
 	&__menu._active {
 		top: 35px;
-		left: 0;
+		right: 0;
 		padding: 1rem;
 		border-radius: 5px;
 		background-color: #0000004a;
-		// transform: scale(1) translate(0px, 50%);
+		transform: rotate(0) translate(0px, 50%);
 	}
 }
 .sl-menu {
@@ -577,6 +577,13 @@ body._lock {
 	}
 }
 @media (max-width: 690.98px) {
+	.switch-language {
+		top: 25%;
+		&__menu._active {
+			top: 30%;
+		}
+	}
+
 	.admissions__body h1 {
 		font-size: 5.2rem;
 		margin: 35rem 0rem 1rem 0rem;
@@ -657,6 +664,13 @@ body._lock {
 	.container {
 		padding: 0;
 	}
+	.switch-language {
+		top: 65%;
+		&__menu._active {
+			top: 70%;
+		}
+	}
+
 	.menu__icon {
 		z-index: 5;
 		display: block;
@@ -664,6 +678,7 @@ body._lock {
 		width: 40px;
 		height: 28px;
 		cursor: pointer;
+		margin-left: -30px;
 	}
 	.menu__icon span,
 	.menu__icon::before,
