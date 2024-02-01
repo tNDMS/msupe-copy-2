@@ -130,6 +130,54 @@ body._lock {
 		padding-left: 2.5rem;
 	}
 }
+/*................................................*/
+
+
+.switch-language {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: .2rem;
+	&__icon {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 1.8rem;
+		width: 40px;
+		height: 40px;
+		position: relative;
+		cursor: pointer;
+	}
+
+	&__menu {
+		position: absolute;
+		top: 35px;
+		left: -1000px;
+		display: block;
+		transition: all .5s ease 0s;
+		// transform: scale(0) translate(0px, 50%);
+
+	}
+	&__menu._active {
+		top: 35px;
+		left: 0;
+		padding: 1rem;
+		border-radius: 5px;
+		background-color: #0000004a;
+		// transform: scale(1) translate(0px, 50%);
+	}
+}
+.sl-menu {
+	&__list {
+	}
+
+	&__item {
+		margin-bottom: 1rem;
+	}
+	&__item:last-child {
+		margin-bottom: 0;
+	}
+}
 
 /*................................................*/
 
@@ -143,7 +191,6 @@ body._lock {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin: 2rem 0 0 0;
 	font-size: 1.8rem;
 	padding: 1.5rem;
 	&__body {
@@ -645,9 +692,8 @@ body._lock {
 		transform: scale(1) translate(0px, -50%);
 	}
 
-
-	.menu__icon._active span{
-		transform: scale(0) translate(0px, -50%)
+	.menu__icon._active span {
+		transform: scale(0) translate(0px, -50%);
 	}
 
 	.menu__icon._active::before {
@@ -658,7 +704,6 @@ body._lock {
 	.menu__icon._active::after {
 		bottom: 50%;
 		transform: rotate(45deg) translate(0px, 50%);
-
 	}
 
 	/*----------------------------------*/
